@@ -4,6 +4,7 @@
 ### tasks table
 column name | datatype | details
 ------------|----------|--------
+id          | integer  |`null:false`
 task        | string   |`null:false`
 completed   | boolean  | default to false
 creator_id  | integer  |`null:false`
@@ -18,10 +19,11 @@ updated_at  | datetime |
 ### users table
 column name | datatype | details
 ------------|----------|--------
+id          | integer  |`null:false`
 username    | string   | `null:false`; unique
 created_at  | datetime | 
 updated_at  | datetime |
 
 - `has_many :created_tasks`
 - `has_many :assigned_tasks`
-- indexed on username
+- indexed on `username`
