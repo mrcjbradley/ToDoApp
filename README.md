@@ -1,24 +1,27 @@
-# README
+# To Do App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Schema
+### tasks table
+column name | datatype | details
+------------|----------|--------
+task        | string   |`null:false`
+completed   | boolean  | default to false
+creator_id  | integer  |`null:false`
+assignee_id | integer  |`null:false` [default to creator_id]
+due_date    | datetime |`null:false` <!--Maybe null:true ??? -->
+created_at  | datetime | 
+updated_at  | datetime |
 
-Things you may want to cover:
+- `belongs_to :creator`
+- `belongs_to :assignee`
 
-* Ruby version
+### users table
+column name | datatype | details
+------------|----------|--------
+username    | string   | `null:false`; unique
+created_at  | datetime | 
+updated_at  | datetime |
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `has_many :created_tasks`
+- `has_many :assigned_tasks`
+- indexed on username
