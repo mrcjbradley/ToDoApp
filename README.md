@@ -5,7 +5,8 @@
 column name | datatype | details
 ------------|----------|--------
 id          | integer  |`null:false`
-task        | string   |`null:false`
+task_name        | string   |`null:false`
+parent_task_id | integer | `null: true`
 completed   | boolean  | default to false
 creator_id  | integer  |`null:false`
 assignee_id | integer  |`null:false` [default to creator_id]
@@ -15,6 +16,7 @@ updated_at  | datetime |
 
 - `belongs_to :creator`
 - `belongs_to :assignee`
+- `belongs_to :parent_task, class: :Task, foreign_key: :parent_task_id`
 
 ### users table
 column name | datatype | details

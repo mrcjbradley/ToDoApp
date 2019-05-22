@@ -1,5 +1,39 @@
 {
   "name": "ToDoApp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.3.2"
+  },
+  "description": "## Schema ### tasks table column name | datatype | details ------------|----------|-------- id          | integer  |`null:false` task_name        | string   |`null:false` parent_task_id | integer | `null: true` completed   | boolean  | default to false creator_id  | integer  |`null:false` assignee_id | integer  |`null:false` [default to creator_id] due_date    | datetime |`null:false` <!--Maybe null:true ??? --> created_at  | datetime |  updated_at  | datetime |",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcjbradley/ToDoApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrcjbradley/ToDoApp/issues"
+  },
+  "homepage": "https://github.com/mrcjbradley/ToDoApp#readme"
 }
