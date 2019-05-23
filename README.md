@@ -5,12 +5,13 @@
 column name | datatype | details
 ------------|----------|--------
 id          | integer  |`null:false`
-task_name        | string   |`null:false`
+task_name   | string   |`null:false`
+description | text     | `null:true` <!-- Maybe have student add this to migration -->
 parent_task_id | integer | `null: true`
 completed   | boolean  | default to false
 creator_id  | integer  |`null:false`
 assignee_id | integer  |`null:false` [default to creator_id]
-due_date    | datetime |`null:false` <!--Maybe null:true ??? -->
+due_date    | datetime |`null:false` <!-- Maybe null:true ??? -->
 created_at  | datetime | 
 updated_at  | datetime |
 
