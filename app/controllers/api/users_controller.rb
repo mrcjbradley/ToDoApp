@@ -26,9 +26,14 @@ class Api::UsersController < ApplicationController
         end 
     end
 
-    def delete
+    def destroy
         @user = User.find(params[:id])
-        render :index
+        if @user
+            @user.destroy
+            render json: { userId: @user.id }
+        else
+            render json: @user.errors.full_messages
+        end
     end
 
     def user_params
